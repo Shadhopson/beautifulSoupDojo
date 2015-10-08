@@ -1,0 +1,20 @@
+import urllib2
+
+urllib2.urlopen()
+.read()
+.close()
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(theHtml, 'lxml')
+soup.select('a')
+soup.select('.myClass')
+soup.select('a .myClass')
+soup.select('a > .myClass')
+links = soup.select('a')
+for link in links:
+    link.get('href') 
+    link.get_text()
+
+
+import time
+ time.sleep(3)
